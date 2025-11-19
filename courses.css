@@ -1,0 +1,233 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'cutive';
+}
+
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.title {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #2d3436;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #636e72;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+
+.missions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #2d3436;
+    margin-bottom: 15px;
+}
+
+
+.level {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.level:is(:contains("Easy")) {
+    background-color: #e1f5fe;
+    color: #0288d1;
+}
+
+.level:is(:contains("Medium")) {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.level:is(:contains("Hard")) {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.level:is(:contains("Intermediate")) {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+/* Card Content */
+.card ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.card ul li {
+    margin: 10px 0;
+    color: #636e72;
+    display: flex;
+    align-items: center;
+}
+
+.card ul li::before {
+    content: "→";
+    margin-right: 10px;
+    color: #0984e3;
+}
+
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #f1f2f6;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #0984e3, #00cec9);
+    width: var(--progress);
+    transition: width 0.3s ease;
+}
+
+
+.reward {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #00b894;
+    text-align: right;
+}
+
+/* Progress Container */
+.progress-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.progress-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2d3436;
+    margin-bottom: 30px;
+}
+
+
+.progress-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.stat {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.1),
+        -8px -8px 16px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.value.blue { color: #0984e3; }
+.value.purple { color: #6c5ce7; }
+.value.green { color: #00b894; }
+
+.label {
+    font-size: 0.9rem;
+    color: #636e72;
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+    .missions {
+        grid-template-columns: 1fr;
+    }
+    
+    .progress-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+}

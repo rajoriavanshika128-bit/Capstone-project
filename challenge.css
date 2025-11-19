@@ -1,0 +1,215 @@
+body {
+  background-color: #0b0b18;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px 24px 80px; 
+}
+
+.h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 40px;
+    color: #00eaff;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+
+}
+
+p{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+.battle-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 80px auto; 
+  align-items: start;
+  grid-auto-rows: 1fr; 
+}
+
+.battle-card {
+  background: #17172a;
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  min-height: 220px; 
+}
+
+.difficulty {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0.8rem;
+  background: #2c2c40;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.easy .difficulty {
+  color: #00ff7f;
+}
+
+.medium .difficulty {
+  color: #b37fff;
+}
+
+.hard .difficulty {
+  color: #ff5f5f;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #b0b0c3;
+}
+
+.info {
+  margin-top: 15px;
+}
+
+.info p {
+  margin: 5px 0;
+}
+
+.info span {
+  color: #aaa;
+  margin-right: 5px;
+}
+
+.reward {
+  margin-top: 15px;
+  color: #ffc000;
+  font-weight: 600;
+}
+
+button {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #00eaff;
+  color: #00eaff;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #00eaff;
+  color: #000;
+}
+
+
+.page-header {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.page-header h1 {
+  font-size: 2.6rem;
+  color: #00eaff;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
+}
+
+.page-header p {
+  font-size: 1rem;
+  color: #b0b0c3;
+  margin-top: 8px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.battle-record {
+  background-color: #17172a;
+  padding: 32px 36px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 24px; 
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battle-record h2 {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.08);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.stat {
+  text-align: center;
+  min-width: 120px;
+  flex: 1 1 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat h3 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.stat p {
+  margin-top: 8px;
+  color: #9fa4b8;
+  font-size: 0.95rem;
+}
+
+.green { color: #00ffae; }
+.red   { color: #ff4d4d; }
+.purple{ color: #b37fff; }
+.yellow{ color: #ffc000; }
+
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 20px 100px; 
+}
+
+
+@media (max-width: 600px) {
+  .page-header h1 { font-size: 1.8rem; }
+  .battle-card { min-height: 200px; padding: 18px; }
+  .stats { gap: 18px; }
+}
