@@ -213,3 +213,13 @@ button:hover {
   .battle-card { min-height: 200px; padding: 18px; }
   .stats { gap: 18px; }
 }
+.social-icons a{
+    
+  display: inline-block;
+  margin-right: 15px;
+  color: #bbb;
+  text-decoration: none;
+}
+.social-icons a:hover {
+    color: #fff;
+}

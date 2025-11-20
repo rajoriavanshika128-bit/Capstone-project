@@ -242,7 +242,7 @@ body {
 }
 .social-icons a{
     
-  display: block;
+  display: inline-block;
   margin-right: 15px;
   color: #bbb;
   text-decoration: none;
