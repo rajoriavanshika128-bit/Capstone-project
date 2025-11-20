@@ -504,7 +504,7 @@ main {
   margin-bottom: 15px;
 }
 
-/* ===== CHALLENGES PAGE ===== */
+
 .challenge-intro {
   position: relative;
   text-align: center;
@@ -653,7 +653,7 @@ main {
   letter-spacing: 1px;
 }
 
-/* ===== LEADERBOARD PAGE ===== */
+
 .leaderboard-intro {
   text-align: center;
   padding: 60px 20px;
@@ -784,7 +784,7 @@ main {
   color: #fff;
 }
 
-/* ===== FOOTER ===== */
+
 .site-footer {
   background-color: #000000;
   color: #ffffff;
@@ -824,7 +824,7 @@ main {
   color: #ff4655;
 }
 
-/* ===== UTILITIES ===== */
+
 .divider {
   width: 100px;
   height: 3px;
@@ -832,7 +832,7 @@ main {
   margin: 30px auto;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
   .header-inner {
     flex-wrap: wrap;

@@ -8,13 +8,41 @@
 .social-icons a:hover {
     color: #fff;
 }
-.brand-logo {
+/* .brand-logo {
     
     
-}
+} */
 header-inner{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap:20px;
 }
+
+/* .main-nav{
+    display: flex;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+.main-nav:hover{
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+} */
+
+.main-nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  background: #4a3aff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease; transform: scale(1.1);
+}
+
+.main-nav a:hover {
+  background: #1e10c5;
+} 
