@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeQuest - Wishlist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="wishlist.css">
   <link rel="icon" type="image/x-icon" href="logo.jpg">
 </head>
+
 <body>
   <header class="site-header">
     <div class="header-inner">
@@ -23,12 +26,13 @@
           <li><a href="courses.html">COURSES</a></li>
           <li><a href="challenges.html">CHALLENGES</a></li>
           <li><a href="leaderboard.html">LEADERBOARD</a></li>
-          <li><a class="active" href="wishlist.html">WISHLIST <span id="wishlist-count" class="wishlist-badge">0</span></a></li>
+          <li><a class="active" href="wishlist.html">WISHLIST <span id="wishlist-count"
+                class="wishlist-badge">0</span></a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="search-btn" type="button">Search</button>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" type="button">Light Mode</button>
         <a href="signup.html" class="btn btn-red">Sign Up</a>
         <a href="login.html" class="btn btn-red-outline">Login</a>
       </div>
@@ -39,17 +43,18 @@
     <section class="wishlist-hero">
       <h1 class="hero-title">YOUR WISHLIST</h1>
       <p class="section-subtitle">
-        Track your favorite courses and prepare for your coding journey. Add courses to your wishlist and start learning when you're ready!
+        Track your favorite courses and prepare for your coding journey. Add courses to your wishlist and start learning
+        when you're ready!
       </p>
       <div class="divider"></div>
     </section>
 
     <section class="wishlist-container">
       <div id="wishlist-items" class="wishlist-grid">
-        
+
       </div>
       <div id="empty-wishlist" class="empty-state">
-        <div class="empty-icon">📚</div>
+        <!-- <div class="empty-icon"></div> -->
         <h2>Your Wishlist is Empty</h2>
         <p>Start adding courses to build your learning path!</p>
         <a href="courses.html" class="btn-cta">Browse Courses</a>
@@ -72,5 +77,7 @@
   </footer>
 
   <script src="wishlist.js"></script>
+  <script src="theme-toggle.js"></script>
 </body>
+
 </html>

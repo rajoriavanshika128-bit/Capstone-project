@@ -8,10 +8,7 @@
 .social-icons a:hover {
     color: #fff;
 }
-/* .brand-logo {
-    
-    
-} */
+
 header-inner{
     display: flex;
     align-items: center;
@@ -19,16 +16,7 @@ header-inner{
     gap:20px;
 }
 
-/* .main-nav{
-    display: flex;
-    gap: 15px;
-    transition: all 0.3s ease;
-}
-.main-nav:hover{
-    background-color: red;
-    color: white;
-    transform: scale(1.1);
-} */
+
 
 .main-nav a{
     text-decoration: none;
