@@ -1,0 +1,211 @@
+
+
+.wishlist-badge {
+    background: linear-gradient(135deg, #ff4655, #ff6b7a);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 5px;
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(255, 70, 85, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.wishlist-hero {
+    position: relative;
+    text-align: center;
+    padding: 120px 20px;
+    margin: 40px 20px;
+    border: 2px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 70, 85, 0.1), rgba(35, 197, 255, 0.1));
+}
+
+.wishlist-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=1600&q=70");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    filter: grayscale(20%);
+}
+
+.wishlist-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
+}
+
+.wishlist-hero>* {
+    position: relative;
+    z-index: 2;
+}
+
+.wishlist-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    min-height: 400px;
+}
+
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.wishlist-item {
+    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wishlist-item:hover {
+    transform: translateY(-8px);
+    border-color: #ff4655;
+    box-shadow: 0 15px 40px rgba(255, 70, 85, 0.3);
+}
+
+.wishlist-item-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #333;
+}
+
+.wishlist-item-content {
+    padding: 20px;
+}
+
+.wishlist-item h3 {
+    color: #ff4655;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.wishlist-item .course-meta {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wishlist-item p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.wishlist-item-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-remove {
+    flex: 1;
+    background: linear-gradient(135deg, #ff4655, #ff6b7a);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-remove:hover {
+    background: linear-gradient(135deg, #ff6b7a, #ff4655);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 70, 85, 0.4);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    display: none;
+}
+
+.empty-state.show {
+    display: block;
+}
+
+.empty-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.empty-state h2 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 768px) {
+    .wishlist-grid {
+        grid-template-columns: 1fr;
+    }
+}
